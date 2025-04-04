@@ -32,22 +32,22 @@ const formData = ref({
   securityGroups: [] as string[],
 });
 
+// function to move to next step
 const nextStep = () => {
   if (currentStep.value < steps.length - 1) {
     currentStep.value++;
   }
 };
 
+// function to move to previous step
 const prevStep = () => {
   if (currentStep.value > 0) {
     currentStep.value--;
   }
 };
 
+// function to submit the form
 const submitForm = () => {
-  // Perform any deploy-related logic here (e.g., API call)
-
-  console.log("clicked");
   // After deployment logic, navigate to the confirmation page
   router.push({ name: "Confirmation" });
 };

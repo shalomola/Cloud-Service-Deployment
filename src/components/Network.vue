@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { defineProps, defineEmits } from 'vue';
 
+// Define the interface for the form data
 interface NetworkSettingsForm {
     vpc: string;
   subnet: string;
@@ -8,6 +9,7 @@ interface NetworkSettingsForm {
   securityGroups: string[];
 }
 
+// Define the props and emits for the component
 const props = defineProps<{ formData: NetworkSettingsForm }>();
 const emit = defineEmits(['update:formData']);
 
@@ -33,7 +35,6 @@ const updateForm = (newData: Partial<NetworkSettingsForm>) => {
     <label for="vpc" class="text-xs text-gray-500">Virtual Private Cloud (VPC) <span class="text-red-500">*</span></label>
     <select v-model="props.formData.vpc" @change="updateForm({ vpc: ($event.target as HTMLSelectElement).value })" class="border-b border-b-gray-300 w-full focus:outline-0 py-1 text-sm">
       <option value="us-east-1">Development VPC</option>
-      <option value="us-west-1">US West (N. California)</option>
     </select>
   </div>
 

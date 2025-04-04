@@ -1,17 +1,21 @@
 <script setup lang="ts">
 import { defineProps, defineEmits, ref } from 'vue'
 
+// Define props and emits for the component
 const props = defineProps<{ formData: any }>()
 const emit = defineEmits(['update:formData'])
 
+// Create variables for image upload operations
 const selectedImage = ref<File | null>(null)
 const imagePreview = ref<string | null>(null)
 const imageInput = ref<HTMLInputElement | null>(null)
 
+// Trigger image upload input field
 const triggerUpload = () => {
   imageInput.value?.click()
 }
 
+//Handle image upload
 const handleImageUpload = (event: Event) => {
   const target = event.target as HTMLInputElement
   const file = target.files?.[0]
@@ -22,6 +26,7 @@ const handleImageUpload = (event: Event) => {
   }
 }
 
+// Handle imgae upload cancellation
 const cancelUpload = () => {
   selectedImage.value = null
   imagePreview.value = null

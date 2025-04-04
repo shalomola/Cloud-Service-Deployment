@@ -32,8 +32,10 @@
 <script setup lang="ts">
 import { defineProps } from 'vue'
 
+// Define props for currentStep state
 const props = defineProps<{ currentStep: number }>()
 
+// Define steps for the cloud service configuration process
 const steps = [
   {
     title: 'Service Basics',
@@ -53,6 +55,7 @@ const steps = [
   }
 ]
 
+// Function to check if a step is active based on the currentStep
 const isActive = (index: number) => {
   return index <= props.currentStep
 }

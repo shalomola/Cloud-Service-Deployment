@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { defineProps, defineEmits } from 'vue'
 
+// Define props and emits as required by the component
 const props = defineProps<{ formData: any }>()
 const emit = defineEmits(['update:formData'])
 </script>

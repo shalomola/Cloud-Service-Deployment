@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, nextTick } from 'vue';
 
-
 const emit = defineEmits(['close-modal']);
 
 const headerHeight = ref(0)
@@ -68,7 +67,6 @@ onMounted(async () => {
   
               <div class="values w-full lg:w-3/5">
                 <div class="flex flex-col items-center justify-center bg-gray-300 h-28 w-28 rounded-xl">
-                  <!-- <img :src="formData.serviceImage" alt="" class="w-full h-full object-cover"> -->
                 </div>
               </div>
             </li>

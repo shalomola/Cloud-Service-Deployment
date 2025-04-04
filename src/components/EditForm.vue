@@ -6,7 +6,6 @@ import Network from "./Network.vue";
 import { steps } from "./constants/data.vue";
 import { useRouter } from "vue-router";
 
-// const router = useRouter();
 
 const formData = ref({
   // Service Details
@@ -34,7 +33,6 @@ const formData = ref({
     class="main-content w-full min-h-screen flex flex-row justify-center p-5 lg:p-7"
   >
     <div class="content bg-white w-full border border-slate-300 rounded-sm">
-      <!-- <Navbar :currentStep="currentStep" /> -->
 
       <div class="sections w-full mt-8">
         <ServiceBasics v-model:formData="formData" />
